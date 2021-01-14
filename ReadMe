@@ -9,3 +9,12 @@ In DBConnector.java replace "jdbc:mysql://localhost:3306/project","root","123"  
                                        (Connection String)   (mysql user) (password)
                                        
 After running the application, To Access various option refer to the Menu bar on top left On the Window that poped up.
+
+To Load in Database file in the MySql database:
+in mysql run "Create database project;"
+                                                Open Cmd(with Run as administrator).
+                                                type - cd "path bin of wherever mysql is installed"
+                                                Example cd "C:\Program Files (x86)\MySQL\MySQL Server 5.2\bin"
+                                                
+                                                Now type- mysql -u root -p project < project.sql
+                                                you will be asked to type password and database will be added, then Application will run smooth and fast.
