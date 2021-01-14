@@ -6,7 +6,7 @@ So for that a project.sql database file is given which should be loaded in the M
 
 In order for project to run one should change the Connection String in the DBConnector.java file.
 In DBConnector.java replace "jdbc:mysql://localhost:3306/project","root","123"        with your local username and password.
-                                       (Connection String)   (mysql user) (password)
+                                       (Connection String)   (mysql user) (password).
                                        
 After running the application, To Access various option refer to the Menu bar on top left On the Window that poped up.
 
