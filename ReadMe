@@ -1,5 +1,5 @@
 The Project is Based in Java and Application need to run this is Netbeans IDE.
-In the Netbeans IDE - Go to > File > Open Project > Select the Directory where project is located.
+In the Netbeans IDE - Go to > File > Open Project > Select the Project in the Directory where project is located.
 
 In the Project the Data about Login and other details is fetched from the database, 
 So for that a project.sql database file is given which should be loaded in the MySql Server.
