@@ -92,7 +92,7 @@ public class UserRoles extends javax.swing.JFrame {
             }
         });
 
-        cmbrole.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Admin", "Normal User", "Employee" }));
+        cmbrole.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Admin", "Passenger", "Employee" }));
 
         jLabel1.setText("User");
 
@@ -221,8 +221,10 @@ public class UserRoles extends javax.swing.JFrame {
             if(rs.next()){
                 if(rs.getInt("role_id")==0)
                     jTextField1.setText("Admin");
+                else if(rs.getInt("role_id")==1)
+                    jTextField1.setText("Passenger");
                 else
-                    jTextField1.setText("Normal User");
+                    jTextField1.setText("Employee");
             }
         } catch(Exception e)
         {
