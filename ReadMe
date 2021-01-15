@@ -8,7 +8,6 @@ In order for project to run one should change the Connection String in the DBCon
 In DBConnector.java replace "jdbc:mysql://localhost:3306/project","root","123"        with your local username and password.
                                        (Connection String)   (mysql user) (password).
                                        
-After running the application, To Access various option refer to the Menu bar on top left On the Window that poped up.
 
 To Load in Database file in the MySql database:
 in mysql run "Create database project;"
@@ -19,3 +18,5 @@ in mysql run "Create database project;"
                                                 Now type- mysql -u root -p project < project.sql
                                                                                      (file path)
                                                 you will be asked to type password and database will be added, then Application will run smooth and fast.
+
+After running the application, To Access various option refer to the Menu bar on top left On the Window that poped up.
