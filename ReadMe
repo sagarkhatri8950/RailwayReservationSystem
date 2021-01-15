@@ -1,0 +1,22 @@
+The Project is Based in Java and Application need to run this is Netbeans IDE.
+In the Netbeans IDE - Go to > File > Open Project > Select the Directory where project is located.
+
+In the Project the Data about Login and other details is fetched from the database, 
+So for that a project.sql database file is given which should be loaded in the MySql Server.
+
+In order for project to run one should change the Connection String in the DBConnector.java file.
+In DBConnector.java replace "jdbc:mysql://localhost:3306/project","root","123"        with your local username and password.
+                                       (Connection String)   (mysql user) (password).
+                                       
+
+To Load in Database file in the MySql database:
+in mysql run "Create database project;"
+                                                Open Cmd(with Run as administrator).
+                                                type - cd "path bin of wherever mysql is installed"
+                                                Example cd "C:\Program Files (x86)\MySQL\MySQL Server 5.2\bin"
+                                                
+                                                Now type- mysql -u root -p project < project.sql
+                                                                                     (file path)
+                                                you will be asked to type password and database will be added, then Application will run smooth and fast.
+
+After running the application, To Access various option refer to the Menu bar on top left On the Window that poped up.
