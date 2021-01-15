@@ -211,7 +211,7 @@ String account_name;
     }// </editor-fold>//GEN-END:initComponents
 void clear()
 {
-   txtpname.setText(" ");
+    txtpname.setText(" ");
     txtaddress.setText(" ");
     txtroute.setText(" ");
     txtroute1.setText(" ");
@@ -222,14 +222,53 @@ void clear()
 }
     private void jb3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb3ActionPerformed
         // TODO add your handling code here:
+        
         try
         {
             String query="select * from passenger where pname='" +txtpname.getText()+"';";
             stmt=con.createStatement();
-            rs=stmt.executeQuery(query);
+            if(role==1){
+                rs=stmt.executeQuery(query);
             
             if(rs.next())
-            {jb2.setEnabled(true);
+            {
+                String passeng = rs.getString("username");
+                if(passeng.equals(account_name)){
+                    jb2.setEnabled(true);
+                int n=rs.getInt("tno");
+                String tname=rs.getString("tname");
+                String add=rs.getString("address");
+                String phoneno=rs.getString("phoneno");
+                 String froms=rs.getString("froms");
+                 String tos=rs.getString("tos");
+                 String clas=rs.getString("class");
+                 txttno.setText(" "+n);
+                txtaddress.setText(add);
+                 txtroute.setText(froms);
+                 txtroute1.setText(tos);
+                 txtphone.setText(phoneno);
+                 txttname.setText(tname);
+                 txtclass.setText(" "+clas);
+                }
+                else{
+                    opane1.showMessageDialog(null,"No Record Exist");
+                }
+                
+            }
+            else
+            {
+                opane1.showMessageDialog(null,"No Record Exist");
+                //jb3.setEnabled(false);
+            }
+            }
+            else{
+                
+                rs=stmt.executeQuery(query);
+            
+            if(rs.next())
+            {
+                String passeng = rs.getString("username");
+                jb2.setEnabled(true);
                 int n=rs.getInt("tno");
                 String tname=rs.getString("tname");
                 String add=rs.getString("address");
@@ -250,6 +289,9 @@ void clear()
                 opane1.showMessageDialog(null,"No Record Exist");
                 //jb3.setEnabled(false);
             }
+                
+            }
+            
         }
                     catch(Exception e)
                     {
@@ -291,11 +333,11 @@ void clear()
             {
 
              String query1="update train set sleeper_seats=sleeper_seats+1 where tno=" + tno+" and source='" + source+"' and destination='"+dest+"';";
-               stmt1.executeUpdate(query1)        ;
+             stmt1.executeUpdate(query1)        ;
              }
 
             opane1.showMessageDialog(null,"Ticket has been cancelled");
-              jb2.setEnabled(false);
+            jb2.setEnabled(false);
         }
         catch(Exception e)
         {

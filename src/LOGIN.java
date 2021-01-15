@@ -146,6 +146,10 @@ public class LOGIN extends javax.swing.JFrame {
                 new User(role,account).setVisible(true);
                 this.setVisible(false);
             }
+            else if(pass.equals(rs.getString("user_p")) && role==2){
+                new User(role,account).setVisible(true);
+                this.setVisible(false);
+            }
             else
             {
                 jOptionPane1.showMessageDialog(null,"WRONG PASSWORD");

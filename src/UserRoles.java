@@ -92,7 +92,7 @@ public class UserRoles extends javax.swing.JFrame {
             }
         });
 
-        cmbrole.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Admin", "Normal User" }));
+        cmbrole.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Admin", "Normal User", "Employee" }));
 
         jLabel1.setText("User");
 

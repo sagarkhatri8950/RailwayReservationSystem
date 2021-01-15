@@ -236,7 +236,7 @@ public class MODIFYPASSNGER extends javax.swing.JFrame {
             if(rs.next())
             {
             String passeng = rs.getString("username");
-            if( passeng.equals(account_name))
+            if(passeng.equals(account_name))
             {
                 
                 String address=rs.getString("address");
@@ -251,8 +251,10 @@ public class MODIFYPASSNGER extends javax.swing.JFrame {
                 txtphone.setText(phno);
                 txtage.setText(" "+age);
             }
-            else
+            else{
                 opane1.showMessageDialog(null,"no such record");
+            }
+               
             }
             
         }
